@@ -1,0 +1,27 @@
+* {
+	box-sizing: border-box;
+	vertical-align: baseline;
+	font-weight: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	font-style: inherit;
+	font-size: 1rem;
+	border: 0;
+	outline: 0;
+	padding: 0;
+	margin: 0;
+}
+
+section {
+	height: 100vh;
+	background-color: #23272a;
+	color: #dae5e9;
+}
+
+.bg-padrao {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.8rem;
+	padding: 1rem;
+}

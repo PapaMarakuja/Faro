@@ -42,14 +42,21 @@ section {
 	width: 100%;
 }
 
+.sound {
+	display: grid;
+	place-items: center;
+	border-radius: 0.8rem;
+	backdrop-filter: blur(16px) saturate(180%);
+	background-color: rgba(155, 155, 155, 0.75);
+	border: 1px solid rgba(255, 255, 255, 0.125);
+	cursor: pointer;
+	transition: background-color 0.125s ease-in;
+}
+
+.sound:where(:focus, :hover, :active) {
+	background-color: rgba(155, 155, 155, 1);
+}
+
 .sound img {
 	height: 100px;
-}
-
-.hide {
-	display: none;
-}
-
-h1 {
-	font-size: 5rem;
 }

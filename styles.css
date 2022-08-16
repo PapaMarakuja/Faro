@@ -12,9 +12,14 @@
 	margin: 0;
 }
 
-section {
-	height: 100vh;
+body {
 	background-color: #23272a;
+}
+
+section {
+	display: flex;
+	justify-content: center;
+	height: 100vh;
 	color: #dae5e9;
 }
 
@@ -24,4 +29,17 @@ section {
 	align-items: center;
 	gap: 0.8rem;
 	padding: 1rem;
+	width: 100%;
+	max-width: 1280px;
+}
+
+.sounds-section {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
+	gap: 1rem;
+	width: 100%;
+}
+
+.sound img {
+	height: 100px;
 }

@@ -40,6 +40,15 @@ section {
 	width: 100%;
 }
 
+.sound {
+	display: grid;
+	place-items: center;
+	border-radius: 0.8rem;
+	backdrop-filter: blur(16px) saturate(180%);
+	background-color: rgba(155, 155, 155, 0.75);
+	border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
 .sound img {
 	height: 100px;
 }

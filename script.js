@@ -6,14 +6,14 @@ function typeWriter(elemento) {
 	});
 }
 
-const titulo = document.querySelector('h1');
-
-typeWriter(titulo);
-
 function colcoarBtns() {}
 
-function playAudio(url) {
+function playAudio(url, title) {
 	new Audio(url).play();
+	document.getElementById('text').innerHTML = `<h1>${title}</h1>`;
+	const titulo = document.querySelector('h1');
+
+	typeWriter(titulo);
 }
 
 const audioArea = document.getElementById('audio');
@@ -106,7 +106,7 @@ const audios = [
 audios.forEach((x) => {
 	audioArea.innerHTML = `${audioArea.innerHTML} 
     <div class="sound" onclick="playAudio('${x.audio}')">
-        <img src="./assets/images/button.webp" alt="btn" />
+        <img src="./assets/images/button.png" alt="btn" />
         <p>${x.title}</p>
     </div>`;
 });

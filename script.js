@@ -12,13 +12,25 @@ typeWriter(titulo);
 
 function colcoarBtns() {}
 
-function runAudio(btn) {
-	switch (btn) {
-		case 00:
-			console.log('btn 01');
-			break;
-		case 01:
-			console.log('btn 02');
-			break;
-	}
+function playAudio(url) {
+	new Audio(url).play();
 }
+
+const audioArea = document.getElementById('audio');
+const audios = [
+	{
+		audio: './assets/audio/ai-mamae-rodrigo-faro.mp3',
+		title: 'Ai mamãe',
+	},
+	{
+		audio: 'url2',
+		title: 'Ele gosta',
+	},
+];
+audios.forEach((x) => {
+	audioArea.innerHTML = `${audioArea.innerHTML} 
+    <div class="sound" onclick="playAudio('${x.audio}')">
+        <img src="./assets/images/button.png" alt="btn" />
+        <p>${x.title}</p>
+    </div>`;
+});

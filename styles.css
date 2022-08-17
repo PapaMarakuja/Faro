@@ -51,6 +51,8 @@ section {
 	background-color: rgba(155, 155, 155, 0.75);
 	border: 1px solid rgba(255, 255, 255, 0.125);
 	cursor: pointer;
+	user-select: none;
+	text-transform: uppercase;
 	transition: background-color 0.125s ease-in;
 }
 

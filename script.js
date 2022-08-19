@@ -6,12 +6,10 @@ function typeWriter(elemento) {
 	});
 }
 
-function colcoarBtns() {}
-
 function playAudio(url, title) {
 	new Audio(url).play();
-	document.getElementById('text').innerHTML = `<h1>${title}</h1>`;
-	const titulo = document.querySelector('h1');
+	document.getElementById('text').innerHTML = `<h1 id="title">${title}</h1>`;
+	const titulo = document.getElementById('title');
 
 	typeWriter(titulo);
 }
@@ -48,7 +46,7 @@ const audios = [
 	},
 	{
 		audio: './assets/audio/e-brincadeira-hein-rodrigo-faro.mp3',
-		title: 'È brincadeira hein',
+		title: 'É brincadeira hein',
 	},
 	{
 		audio: './assets/audio/ele-g0sta.mp3',
@@ -105,8 +103,8 @@ const audios = [
 ];
 audios.forEach((x) => {
 	audioArea.innerHTML = `${audioArea.innerHTML} 
-    <div class="sound" onclick="playAudio('${x.audio}', '${x.title}')">
-        <img src="./assets/images/button.png" alt="btn" />
+    <div class="sound" onclick="playAudio('${x.audio}','${x.title}')">
+        <button></button>
         <p>${x.title}</p>
     </div>`;
 });

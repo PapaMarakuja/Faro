@@ -53,80 +53,80 @@ section {
 	cursor: pointer;
 	user-select: none;
 	text-transform: uppercase;
-	transition: background-color 0.125s ease-in;
+	text-align: center;
+	padding: 0.4rem 0.8rem;
+	gap: 0.5rem;
+	transition: background 0.125s ease-in;
 }
 
 .sound:where(:focus, :hover, :active) {
 	background-color: rgba(155, 155, 155, 1);
 }
 
-.sound img {
-	height: 100px;
-	width: 100px;
+.sound:active button {
+	background: rgb(188, 26, 48);
+	background: radial-gradient(
+		circle,
+		rgba(188, 26, 48, 1) 11%,
+		rgba(219, 36, 45, 1) 76%,
+		rgba(244, 137, 121, 1) 100%
+	);
+	box-shadow: 0 1px #606060;
+	transform: translateY(4px);
 }
 
-h1 {
+.sound button {
+	background: rgb(188, 26, 48);
+	background: radial-gradient(
+		circle,
+		rgba(188, 26, 48, 1) 23%,
+		rgba(219, 36, 45, 1) 76%,
+		rgba(244, 137, 121, 1) 100%
+	);
+	padding: 2rem;
+	border: none;
+	border-radius: 45%;
+	box-shadow: 0 5px #606060;
+	transition: all 0.125s ease;
+}
+
+#title {
 	font-size: 2.5rem;
-	font-family: 'Calistoga', cursive;
 	word-break: break-word;
-}
-
-.hide {
-	display: none;
-}
-
-.rainbow-bg {
-	animation: rainbow-bg 2.5s linear;
-	animation-iteration-count: infinite;
 }
 
 .rainbow {
 	animation: rainbow 2.5s linear;
 	animation-iteration-count: infinite;
+	font-family: 'Calistoga', cursive;
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
 	gap: 1rem;
-	width: auto;	
+	width: auto;
 	min-height: 4rem;
 }
 
-@keyframes rainbow-bg {
-	100%,
-	0% {
-		background-color: rgb(255, 0, 0);
-	}
-	8% {
-		background-color: rgb(255, 127, 0);
-	}
-	16% {
-		background-color: rgb(255, 255, 0);
-	}
-	25% {
-		background-color: rgb(127, 255, 0);
-	}
-	33% {
-		background-color: rgb(0, 255, 0);
-	}
-	41% {
-		background-color: rgb(0, 255, 127);
-	}
-	50% {
-		background-color: rgb(0, 255, 255);
-	}
-	58% {
-		background-color: rgb(0, 127, 255);
-	}
-	66% {
-		background-color: rgb(0, 0, 255);
-	}
-	75% {
-		background-color: rgb(127, 0, 255);
-	}
-	83% {
-		background-color: rgb(255, 0, 255);
-	}
-	91% {
-		background-color: rgb(255, 0, 127);
+.faro {
+	display: grid;
+	gap: 1.2rem;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.faro img {
+	min-height: 300px;
+	min-width: 300px;
+}
+
+.faro h1 {
+	font-size: 2.5rem;
+	word-break: break-all;
+}
+
+@media (min-width: 800px) {
+	.faro {
+		display: flex;
+		align-items: center;
 	}
 }
 

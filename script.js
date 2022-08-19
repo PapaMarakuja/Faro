@@ -105,8 +105,8 @@ const audios = [
 ];
 audios.forEach((x) => {
 	audioArea.innerHTML = `${audioArea.innerHTML} 
-    <div class="sound" onclick="playAudio('${x.audio}')">
-        <img src="./assets/images/button.png" alt="btn" />
+    <div class="sound" onclick="playAudio('${x.audio}','${x.title}')">
+        <img loading="lazy" src="./assets/images/button.webp" alt="btn" />
         <p>${x.title}</p>
     </div>`;
 });

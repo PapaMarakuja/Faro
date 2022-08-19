@@ -53,6 +53,7 @@ section {
 	cursor: pointer;
 	user-select: none;
 	text-transform: uppercase;
+	text-align: center;
 	transition: background-color 0.125s ease-in;
 }
 
@@ -63,6 +64,12 @@ section {
 .sound img {
 	height: 100px;
 	width: 100px;
+}
+
+.sound button {
+	padding: 2rem;
+	background-color: #db242d;
+	border-radius: 100%;
 }
 
 h1 {
@@ -86,7 +93,7 @@ h1 {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
 	gap: 1rem;
-	width: auto;	
+	width: auto;
 	min-height: 4rem;
 }
 
